@@ -5,3 +5,7 @@
 - HTML 엔티티
   - th:text, [[...]] 기본적으로 escape를 제공함
   - th:utext, [(...)] 를 사용하면 unescape 가능
+- SpringEL 표현식
+  - Object = user.username
+  - List = users[0].username
+  - Map = userMap['userA'].username
