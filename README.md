@@ -9,3 +9,6 @@
   - Object = user.username
   - List = users[0].username
   - Map = userMap['userA'].username
+- 지역변수 선언
+  - th:with = `<div th:with="first=${users[0]}">`
+  - `<p>처음 사람의 이름은 <span th:text="${first.username}"></span></p>`
