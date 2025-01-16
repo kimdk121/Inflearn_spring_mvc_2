@@ -21,3 +21,6 @@
   - `@{/hello/{param1}(param1=${param1}, param2=${param2})}` -> `/hello/data1?param2=data2`
 - Literal
   - `<span th:text="|hello ${data}|"></span>`
+- 연산
+  - Elvis 연산자 -> `<li>${data}?: '데이터가 없습니다.' = <span th:text="${data}?: '데이터가 없습니다.'"></span></li>`
+  - No Operation -> `<li>${nullData}?: _ = <span th:text="${nullData}?: _">데이터가 없습니다.</span></li>`
