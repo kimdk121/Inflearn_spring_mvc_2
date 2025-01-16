@@ -17,4 +17,5 @@
   - `<span th:text="${session.sessionData}"></span>`
   - `<span th:text="${@helloBean.hello('Spring!')}"></span>`
 - URL 링크
-  - `@{}
+  - `@{/hello/{param1}/{param2}(param1=${param1}, param2=${param2})}` -> ``/hello/data1/data2
+  - `@{/hello/{param1}(param1=${param1}, param2=${param2})}` -> `/hello/data1?param2=data2`
