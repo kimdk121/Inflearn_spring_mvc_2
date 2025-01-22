@@ -24,3 +24,20 @@
 - 연산
   - Elvis 연산자 -> `<li>${data}?: '데이터가 없습니다.' = <span th:text="${data}?: '데이터가 없습니다.'"></span></li>`
   - No Operation -> `<li>${nullData}?: _ = <span th:text="${nullData}?: _">데이터가 없습니다.</span></li>`
+- 속성
+  - `<input type="text" name="mock" th:name="userA"/>`
+  - `<input type="text" class="text" th:classappend="large"/>`
+  - `checked x <input type="checkbox" name="active" th:checked="false"/>`
+- 반복
+  - `<tr th:each="user, userStat : ${users}">`
+  - `<td th:text="${userStat.count}">count</td>`
+  - `<td th:text="${user.username}">username</td>`
+- 조건부평가
+  - `<span th:text="'미성년자'" th:if="${user.age lt 20}"></span>`
+  - `<span th:text="'미성년자'" th:unless="${user.age ge 20}"></span>`
+  - `<td th:switch="${user.age}">`
+    - `<span th:case="10">10살</span>`
+    - `<span th:case="20">20살</span>`
+    - `<span th:case="*">기타</span>`
+- 주석
+  - `<!--/* [[${data}]] */-->`
