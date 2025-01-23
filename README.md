@@ -48,6 +48,6 @@
      -   사용자 나이1 `<span th:text="${user.age}"/>`
      - `</div>`
      - `<div>`
-     -     요약 `<span th:text="${user.username} + ' / ' + ${user.age}"/>`
+     -   요약 `<span th:text="${user.username} + ' / ' + ${user.age}"/>`
      - `</div>`
     `</th:block>`
