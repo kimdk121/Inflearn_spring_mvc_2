@@ -54,6 +54,6 @@
 - 자바스크립트 인라인
   - `<script th:inline="javascript">`
   - 자바스크립트에서 타임리프 문법 편하게 도와줌
-- 템플릿 레이아웃
+- 템플릿 조각
   - `<div th:insert="~{template/fragment/footer :: copy}"/>`
   - `<div th:replace="~{template/fragment/footer :: copyParam ('데이터1', '데이터2')}"/>`
