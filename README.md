@@ -50,4 +50,7 @@
      - `<div>`
      -   요약 `<span th:text="${user.username} + ' / ' + ${user.age}"/>`
      - `</div>`
-    `</th:block>`
+     - `</th:block>`
+- 자바스크립트 인라인
+  - `<script th:inline="javascript">`
+  - 자바스크립트에서 타임리프 문법 쓸 수 있음
