@@ -43,11 +43,11 @@
   - `<!--/* [[${data}]] */-->`
 - 블록
   - `<th:block th:each="user : ${users}">`
-      `<div>`
-        사용자 이름1 `<span th:text="${user.username}"/>`
-        사용자 나이1 `<span th:text="${user.age}"/>`
-      `</div>`
-      `<div>`
-          요약 `<span th:text="${user.username} + ' / ' + ${user.age}"/>`
-      `</div>`
+     - `<div>`
+     -   사용자 이름1 `<span th:text="${user.username}"/>`
+     -   사용자 나이1 `<span th:text="${user.age}"/>`
+     - `</div>`
+     - `<div>`
+     -     요약 `<span th:text="${user.username} + ' / ' + ${user.age}"/>`
+     - `</div>`
     `</th:block>`
