@@ -41,3 +41,19 @@
     - `<span th:case="*">기타</span>`
 - 주석
   - `<!--/* [[${data}]] */-->`
+- 블록
+  - `<th:block th:each="user : ${users}">`
+     - `<div>`
+     -   사용자 이름1 `<span th:text="${user.username}"/>`
+     -   사용자 나이1 `<span th:text="${user.age}"/>`
+     - `</div>`
+     - `<div>`
+     -   요약 `<span th:text="${user.username} + ' / ' + ${user.age}"/>`
+     - `</div>`
+     - `</th:block>`
+- 자바스크립트 인라인
+  - `<script th:inline="javascript">`
+  - 자바스크립트에서 타임리프 문법 편하게 도와줌
+- 템플릿 조각
+  - `<div th:insert="~{template/fragment/footer :: copy}"/>`
+  - `<div th:replace="~{template/fragment/footer :: copyParam ('데이터1', '데이터2')}"/>`
