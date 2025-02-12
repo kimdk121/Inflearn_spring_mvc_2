@@ -69,6 +69,11 @@
   - `<input type="checkbox" id="open" name="open" th:field="*{open}" class="form-check-input">`
   - `<!--<input type="hidden" name="_open" value="on">--> <!-- th:field가 자동으로 만들어줌 -->`
   - checked="checked" 도 해줌
+- 멀티 체크박스
+  - `<div th:each="region : ${regions}" class="form-check form-check-inline">`
+  -     `<input type="checkbox" th:field="*{regions}" th:value="${region.key}" class="form-check-input">`
+  -     `<label th:for="${#ids.prev('regions')}" th:text="${region.value}" class="form-check-label">서울</label>`
+  - `</div>`
 
 
 
