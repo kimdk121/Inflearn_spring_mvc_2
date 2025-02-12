@@ -65,6 +65,9 @@
             `<label for="id">상품 ID</label>`
             `<input type="text" id="id" class="form-control" th:field="*{id}" readonly>`
         `</div>`
+- 체크박스
+  - `<input type="checkbox" id="open" name="open" th:field="*{open}" class="form-check-input">`
+  - `<!--<input type="hidden" name="_open" value="on">--> <!-- th:field가 자동으로 만들어줌 -->`
 
 
 
