@@ -71,8 +71,8 @@
   - checked="checked" 도 해줌
 - 멀티 체크박스
   - `<div th:each="region : ${regions}" class="form-check form-check-inline">`
-  -     `<input type="checkbox" th:field="*{regions}" th:value="${region.key}" class="form-check-input">`
-  -     `<label th:for="${#ids.prev('regions')}" th:text="${region.value}" class="form-check-label">서울</label>`
+    - `<input type="checkbox" th:field="*{regions}" th:value="${region.key}" class="form-check-input">`
+    - `<label th:for="${#ids.prev('regions')}" th:text="${region.value}" class="form-check-label">서울</label>`
   - `</div>`
 
 
