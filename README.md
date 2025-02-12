@@ -68,6 +68,7 @@
 - 체크박스
   - `<input type="checkbox" id="open" name="open" th:field="*{open}" class="form-check-input">`
   - `<!--<input type="hidden" name="_open" value="on">--> <!-- th:field가 자동으로 만들어줌 -->`
+  - checked="checked" 도 해줌
 
 
 
