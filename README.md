@@ -57,3 +57,32 @@
 - 템플릿 조각
   - `<div th:insert="~{template/fragment/footer :: copy}"/>`
   - `<div th:replace="~{template/fragment/footer :: copyParam ('데이터1', '데이터2')}"/>`
+
+## 타임리프 - 스프링 기능
+- 입력 폼 처리
+  - `<form action="item.html" th:action th:object="${item}" method="post">`
+    - `<div>`
+      - `<label for="id">상품 ID</label>`
+      - `<input type="text" id="id" class="form-control" th:field="*{id}" readonly>`
+    - `</div>`
+- 체크박스
+  - `<input type="checkbox" id="open" name="open" th:field="*{open}" class="form-check-input">`
+  - `<!--<input type="hidden" name="_open" value="on">--> <!-- th:field가 자동으로 만들어줌 -->`
+  - checked="checked" 도 해줌
+- 멀티 체크박스
+  - `<div th:each="region : ${regions}" class="form-check form-check-inline">`
+    - `<input type="checkbox" th:field="*{regions}" th:value="${region.key}" class="form-check-input">`
+    - `<label th:for="${#ids.prev('regions')}" th:text="${region.value}" class="form-check-label">서울</label>`
+  - `</div>`
+
+
+
+
+
+
+
+
+
+
+
+     
