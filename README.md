@@ -79,6 +79,9 @@
 - 스프링
   - spring.messsages.basename=messages
   - resources -> messages.properties, messages_en.properties 로 만들면 기본적으로 실행됨
+  - @Autowired
+  - MessageSource messageSource;
+  - String result = ms.getMessage("hello", null, null);
 - 타임리프
   - 
 
