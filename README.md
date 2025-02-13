@@ -78,6 +78,7 @@
 ## 메시지 국제화
 - 스프링
   - spring.messsages.basename=messages
+  - resources -> messages.properties, messages_en.properties 로 만들면 기본적으로 실행됨
 - 타임리프
   - 
 
