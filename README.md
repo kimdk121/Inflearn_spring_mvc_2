@@ -58,7 +58,7 @@
   - `<div th:insert="~{template/fragment/footer :: copy}"/>`
   - `<div th:replace="~{template/fragment/footer :: copyParam ('데이터1', '데이터2')}"/>`
 
-## 타임리프 - 스프링 기능
+## 타임리프 - 입력폼 기능
 - 입력 폼 처리
   - `<form action="item.html" th:action th:object="${item}" method="post">`
     - `<div>`
@@ -75,6 +75,7 @@
     - `<label th:for="${#ids.prev('regions')}" th:text="${region.value}" class="form-check-label">서울</label>`
   - `</div>`
 
+## 메시지 국제화
 
 
 
