@@ -77,7 +77,7 @@
 
 ## 메시지 국제화
 - 스프링
-  - 
+  - spring.messsages.basename=messages
 - 타임리프
   - 
 
