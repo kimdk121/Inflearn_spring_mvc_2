@@ -83,7 +83,7 @@
   - MessageSource messageSource;
   - String result = ms.getMessage("hello", null, null);
 - 타임리프
-  - 
+  - `<th:text="#{label.item.itemName}">`
 
 
 
