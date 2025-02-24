@@ -86,7 +86,11 @@
 - 타임리프
   - `<th:text="#{label.item.itemName}">`
 
-
+## BindingResult
+- 입력 폼 유효성 검사에서 사용
+  - public String addItemV2(@ModelAttribute Item item, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model) {
+  - bindingResult.addError(new FieldError("item","itemName", item.getItemName(), false, null, null, "상품 이름은 필수입니다."));
+  - `<div class="field-error" th:errors="*{itemName}">`
 
 
 
