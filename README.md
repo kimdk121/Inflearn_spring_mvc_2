@@ -9,7 +9,7 @@
   - Object = user.username
   - List = users[0].username
   - Map = userMap['userA'].username
-  - ${errors?.containsKey('quantity')} = errors가 null 이면 NullPointerException 대신 errors에 null을 입력해줌
+  - ${errors?.containsKey('quantity')} = errors가 null 이면 NullPointerException 대신 errors에 null을 반환
 - 지역변수 선언
   - th:with = `<div th:with="first=${users[0]}">`
   - `<p>처음 사람의 이름은 <span th:text="${first.username}"></span></p>`
