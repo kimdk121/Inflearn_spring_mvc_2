@@ -90,6 +90,7 @@
 - 입력 폼 유효성 검사에서 사용
   - public String addItemV2(@ModelAttribute Item item, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model) {
   - bindingResult.addError(new ObjectError("item", null, null, "가격 * 수량의 합은 10,000원 이상이어야 합니다. 현재 값 = " + resultPrice));
+  - `<div th:if="${#fields.hasGlobalErrors()}">` `<p class="field-error" th:each="err : ${#fields.globalErrors()}" th:text="${err}">글로벌 오류 메세지</p>` `</div>`
   - bindingResult.addError(new FieldError("item","itemName", item.getItemName(), false, null, null, "상품 이름은 필수입니다."));
   - `<div class="field-error" th:errors="*{itemName}">`
 
