@@ -94,6 +94,12 @@
   - bindingResult.addError(new FieldError("item","itemName", item.getItemName(), false, null, null, "상품 이름은 필수입니다."));
   - `<div class="field-error" th:errors="*{itemName}">`
 
+## MessageCodesResolver
+- bindingResult.addError(new FieldError("item","itemName", item.getItemName(), false, new String[] {"required.item.itemName"}, null, ""));
+  - 위 코드에서 메세지는 new String[] {"required.item.itemName"} 이 부분인데
+  - MessageCodesResolver 가 자동으로 에러코드, 객체명, 필드명 으로 메세지를 찾아서 넣어준다
+  - 그러면 위의 코드에서 new String[] {"required.item.itemName"} 는 넣을 필요 없이
+  - bindingResult.rejectValue("itemName", "required"); 이렇게 사용가능
 
 
 
