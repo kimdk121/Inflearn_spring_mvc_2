@@ -102,6 +102,12 @@
   - bindingResult.rejectValue("itemName", "required"); 이렇게 사용가능
   - 객체의 타입에러는 typeMismatch.java.lang.Integer 이런식으로 메세지를 찾는다
 
+## Validator
+- public class ItemValidator implements Validator {
+  - public boolean supports(Class<?> aClass) { return Item.class.isAssignableFrom(aClass); }
+  - public void validate(Object o, Errors errors) {
+    - Item item = (Item) o;
+    - // 검증 로직 if (!StringUtils.hasText(item.getItemName())) { errors.rejectValue("itemName", "required"); }
 
 
 
