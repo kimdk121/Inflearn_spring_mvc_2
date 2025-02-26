@@ -109,7 +109,8 @@
     - Item item = (Item) o;
     - // 검증 로직 if (!StringUtils.hasText(item.getItemName())) { errors.rejectValue("itemName", "required"); }
 
-
+## Bean Validation
+- Bean Validation을 구현한 기술중에 일반적으로 사용하는 구현체는 하이버네이트 Validator
 
 
 
