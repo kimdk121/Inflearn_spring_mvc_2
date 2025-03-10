@@ -121,4 +121,11 @@
 - // 다음번 접속 때 세션에 저장되어 있는 로그인 값을 조회해서 로그인 되어 있는지 확인
 - Member loginMember = (Member)session.getAttribute(SessionConst.LOGIN_MEMBER);
 
-     
+## Filter, Interceptor
+- Filter = doFilter 로 핸들링
+- Interceptor
+  - preHandle
+  - postHandle
+  - afterCompletion
+
+
