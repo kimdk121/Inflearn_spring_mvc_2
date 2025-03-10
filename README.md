@@ -119,6 +119,6 @@
 - // 세션에 로그인 정보 저장
 - session.setAttribute(SessionConst.LOGIN_MEMBER, loginMember);
 - // 다음번 접속 때 세션에 저장되어 있는 로그인 값을 조회해서 로그인 되어 있는지 확인
-
+- Member loginMember = (Member)session.getAttribute(SessionConst.LOGIN_MEMBER);
 
      
