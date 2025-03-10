@@ -124,8 +124,8 @@
 ## Filter, Interceptor
 - Filter = doFilter 로 핸들링
 - Interceptor
-  - preHandle
-  - postHandle
-  - afterCompletion
+  - preHandle - 컨트롤러 호출 전에 호출
+  - postHandle - 컨트롤러 호출 후에 호출
+  - afterCompletion - 뷰가 렌더링 된 이후 호출
 
 
