@@ -112,9 +112,13 @@
 ## Bean Validation
 - Bean Validation을 구현한 기술중에 일반적으로 사용하는 구현체는 하이버네이트 Validator
 
-## Login
-- 쿠키 생성 (세션쿠키)
-
-
+## Login Session
+- // 세션이 있으면 있는 세션 반환, 없으면 신규 세션을 생성
+- HttpSession session = request.getSession();
+- // 알아서 세션 UUID를 클라이언트에 쿠키로 저장하고
+- // 세션에 로그인 정보 저장
+- session.setAttribute(SessionConst.LOGIN_MEMBER, loginMember);
+- // 다음번 접속 때 세션에 저장되어 있는 로그인 값을 조회해서 로그인 되어 있는지 확인
+- Member loginMember = (Member)session.getAttribute(SessionConst.LOGIN_MEMBER);
 
      
