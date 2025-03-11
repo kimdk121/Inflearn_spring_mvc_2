@@ -123,6 +123,7 @@
 
 ## Filter, Interceptor
 - 서블릿 필터와 스프링 인터셉터는 웹과 관련된 공통 관심사를 해결하기 위한 기술
+- HTTP 요청 -> WAS -> 필터 -> 서블릿 -> 인터셉터 -> 컨트롤러
 - Filter = doFilter 로 핸들링 request, response는 Servlet을 쓰지만 HttpServletRequest로 다운 캐스팅해도 됨
 - HandlerInterceptor
   - preHandle - 컨트롤러 호출 전에 호출
