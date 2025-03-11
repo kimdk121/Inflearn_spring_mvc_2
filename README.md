@@ -121,4 +121,13 @@
 - // 다음번 접속 때 세션에 저장되어 있는 로그인 값을 조회해서 로그인 되어 있는지 확인
 - Member loginMember = (Member)session.getAttribute(SessionConst.LOGIN_MEMBER);
 
-     
+## Filter, Interceptor
+- 서블릿 필터와 스프링 인터셉터는 웹과 관련된 공통 관심사를 해결하기 위한 기술
+- HTTP 요청 -> WAS -> 필터 -> 서블릿 -> 인터셉터 -> 컨트롤러
+- Filter = doFilter 로 핸들링 request, response는 Servlet을 쓰지만 HttpServletRequest로 다운 캐스팅해도 됨
+- HandlerInterceptor
+  - preHandle - 컨트롤러 호출 전에 호출
+  - postHandle - 컨트롤러 호출 후에 호출
+  - afterCompletion - 뷰가 렌더링 된 이후 호출
+- 특별히 필터를 사용해야 하는 상황이 아니면 인터셉터 사용하는 것이 더 편리
+
