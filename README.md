@@ -122,7 +122,7 @@
 - Member loginMember = (Member)session.getAttribute(SessionConst.LOGIN_MEMBER);
 
 ## Filter, Interceptor
-- Filter = doFilter 로 핸들링
+- Filter = doFilter 로 핸들링 request, response는 Servlet을 쓰지만 HttpServletRequest로 다운 캐스팅해도 됨
 - HandlerInterceptor
   - preHandle - 컨트롤러 호출 전에 호출
   - postHandle - 컨트롤러 호출 후에 호출
