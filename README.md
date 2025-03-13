@@ -155,7 +155,7 @@
 - API
   - 설정하지 않으면 JSON 데이터로 에러 HTML 코드가 전송 됨
   - 스프링부트의 경우 내장되어 있는 BasicErrorController 덕분에 ResponseEntity로 변환해서 보냄
-
+  - HandlerExceptionResolver로 Exception을 원하는 형태로 변환 가능
 
 
 
