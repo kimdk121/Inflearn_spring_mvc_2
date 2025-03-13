@@ -155,7 +155,14 @@
 - API
   - 설정하지 않으면 JSON 데이터로 에러 HTML 코드가 전송 됨
   - 스프링부트의 경우 내장되어 있는 BasicErrorController 덕분에 ResponseEntity로 변환해서 보냄
-  - HandlerExceptionResolver로 Exception을 원하는 형태로 변환 가능
+  - ExceptionHandler 일반적으로 많이 씀
+    - @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    - @ExceptionHandler
+    - public ErrorResult exHandler(Exception e) {
+      - log.error("[exceptionHandler] ex", e);
+      - return new ErrorResult("EX", e.getMessage());
+    - }
+  - 복잡한 예외 흐름은 HandlerExceptionResolver로 Exception을 원하는 형태로 변환 가능
 
 
 
