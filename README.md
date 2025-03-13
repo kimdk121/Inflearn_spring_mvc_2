@@ -131,3 +131,37 @@
   - afterCompletion - 뷰가 렌더링 된 이후 호출
 - 특별히 필터를 사용해야 하는 상황이 아니면 인터셉터 사용하는 것이 더 편리
 
+## Exception
+- HTML
+  - 흐름
+    - 컨트롤러(예외 발생) -> 인터셉터 -> 서블릿 -> 필터 -> WAS (에러찾음)
+    - WAS '/error-page/500' 다시 요청 -> 필터 -> 서블릿 -> 인터셉터 -> 컨트롤러 -> view
+  - 오류화면
+    - public class WebServerCustomizer implements WebServerFactoryCustomizer<ConfigurableWebServerFactory> {
+      - @Override
+      - public void customize(ConfigurableWebServerFactory factory) {
+        - ErrorPage errorPage404 = new ErrorPage(HttpStatus.NOT_FOUND, "/error-page/404");
+        - factory.addErrorPages(errorPage404, errorPage500, errorPageEx);
+        - }
+      - }
+    - }
+  - 그러나 위 흐름대로라면 필터를 두번 부르게 되는데 그건 비효율적, 그래서 DispatcherType이 제공됨
+  - 필터 Bean 등록시에 타입을 넣어야 활성화됨 저걸 넣지 않으면 기본은 REQUEST만 되어있음
+  - filterRegistrationBean.setDispatcherTypes(DispatcherType.REQUEST,DispatcherType.ERROR);
+  - 인터셉터는 /error-page/** 경로 설정으로 제외할 수 있음
+  - excludePathPatterns("/css/**","*.ico","/error", "/error-page/**");
+  - 스프링부트의 경우 내장되어 있는 BasicErrorController 덕분에 resources/templates/error/ 경로에 html파일만 만들어 두면 됨
+  - 500, 404, 4xx 같은 식으로
+- API
+  - 설정하지 않으면 JSON 데이터로 에러 HTML 코드가 전송 됨
+  - 스프링부트의 경우 내장되어 있는 BasicErrorController 덕분에 ResponseEntity로 변환해서 보냄
+  - HandlerExceptionResolver로 Exception을 원하는 형태로 변환 가능
+
+
+
+
+
+
+
+
+
