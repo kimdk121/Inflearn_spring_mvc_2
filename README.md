@@ -149,6 +149,8 @@
 - filterRegistrationBean.setDispatcherTypes(DispatcherType.REQUEST,DispatcherType.ERROR);
 - 인터셉터는 /error-page/** 경로 설정으로 제외할 수 있음
 - excludePathPatterns("/css/**","*.ico","/error", "/error-page/**");
+- 스프링부트의 경우 내장되어 있는 BasicErrorController 덕분에 resources/templates/error/ 경로에 html파일만 만들어 두면 됨
+- 500, 404, 4xx 같은 식으로
 
 
 
