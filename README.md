@@ -137,12 +137,12 @@
   - WAS '/error-page/500' 다시 요청 -> 필터 -> 서블릿 -> 인터셉터 -> 컨트롤러 -> view
 - 오류화면
   - public class WebServerCustomizer implements WebServerFactoryCustomizer<ConfigurableWebServerFactory> {
-  -     @Override
-  -     public void customize(ConfigurableWebServerFactory factory) {
-  -         ErrorPage errorPage404 = new ErrorPage(HttpStatus.NOT_FOUND, "/error-page/404");
-  -         factory.addErrorPages(errorPage404, errorPage500, errorPageEx);
-  -         }
-  -     }
+    - @Override
+    - public void customize(ConfigurableWebServerFactory factory) {
+      - ErrorPage errorPage404 = new ErrorPage(HttpStatus.NOT_FOUND, "/error-page/404");
+      - factory.addErrorPages(errorPage404, errorPage500, errorPageEx);
+      - }
+    - }
   - }
 - 그러나 위 흐름대로라면 필터를 두번 부르게 되는데 그건 비효율적, 그래서 DispatcherType이 제공됨
 
