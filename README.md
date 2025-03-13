@@ -147,7 +147,8 @@
 - 그러나 위 흐름대로라면 필터를 두번 부르게 되는데 그건 비효율적, 그래서 DispatcherType이 제공됨
 - 필터 Bean 등록시에 타입을 넣어야 활성화됨 저걸 넣지 않으면 기본은 REQUEST만 되어있음
 - filterRegistrationBean.setDispatcherTypes(DispatcherType.REQUEST,DispatcherType.ERROR);
-
+- 인터셉터는 /error-page/** 경로 설정으로 제외할 수 있음
+- excludePathPatterns("/css/**","*.ico","/error", "/error-page/**");
 
 
 
