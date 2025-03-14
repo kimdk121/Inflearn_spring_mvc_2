@@ -167,10 +167,11 @@
 
 ## TypeConverter
 - 요청파라미터 -> @RequestParam, @ModelAttribute, @PathVariable 타입변환해줌
-- Config에서 컨버터 추가 가능
+- Config에서 컨버터, 포매터 추가 가능
   - @Override
   - public void addFormatters(FormatterRegistry registry) {
     - registry.addConverter(new StringToIntegerConverter());
+    - registry.addFormatter(new MyNumberFormatter());
   - }
 - thymeleaf 에서는 ${{number}} 중괄호 두번 사용하면 컨버터 적용됨
 - th:field 는 ${number} 중괄호 두번 안해도 컨버터 적용됨
