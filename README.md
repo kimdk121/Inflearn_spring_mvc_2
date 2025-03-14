@@ -172,7 +172,7 @@
   - public void addFormatters(FormatterRegistry registry) {
     - registry.addConverter(new StringToIntegerConverter());
   - }
-- thymeleaf 에서는 ${{number}} 사용하면 컨버터 적용됨
+- thymeleaf 에서는 ${{number}} 중괄호 두번 사용하면 컨버터 적용됨
 
 
 
