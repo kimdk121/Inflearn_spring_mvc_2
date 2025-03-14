@@ -167,6 +167,10 @@
 
 ## TypeConverter
 - 요청파라미터 -> @RequestParam, @ModelAttribute, @PathVariable 타입변환해줌
+- Config에서 컨버터 추가 가능
+  - @Override
+  - public void addFormatters(FormatterRegistry registry) {
+    - registry.addConverter(new StringToIntegerConverter());
 
 
 
