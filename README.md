@@ -165,6 +165,8 @@
   - 전역으로 사용하려면 @ControllerAdvice 사용하여 한곳에 모아놓을 수 있음
   - 복잡한 예외 흐름은 HandlerExceptionResolver로 Exception을 원하는 형태로 변환 가능
 
+## TypeConverter
+- 요청파라미터 -> @RequestParam, @ModelAttribute, @PathVariable 타입변환해줌
 
 
 
