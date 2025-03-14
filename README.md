@@ -175,6 +175,9 @@
   - }
 - thymeleaf 에서는 ${{number}} 중괄호 두번 사용하면 컨버터 적용됨
 - th:field 는 ${number} 중괄호 두번 안해도 컨버터 적용됨
+- 스프링 기본 컨버터
+  - @NumberFormat(pattern = "###,###")
+  - @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 
 
 
