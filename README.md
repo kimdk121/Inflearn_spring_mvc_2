@@ -165,6 +165,19 @@
   - 전역으로 사용하려면 @ControllerAdvice 사용하여 한곳에 모아놓을 수 있음
   - 복잡한 예외 흐름은 HandlerExceptionResolver로 Exception을 원하는 형태로 변환 가능
 
+## TypeConverter
+- 요청파라미터 -> @RequestParam, @ModelAttribute, @PathVariable 타입변환해줌
+- Config에서 컨버터, 포매터 추가 가능
+  - @Override
+  - public void addFormatters(FormatterRegistry registry) {
+    - registry.addConverter(new StringToIntegerConverter());
+    - registry.addFormatter(new MyNumberFormatter());
+  - }
+- thymeleaf 에서는 ${{number}} 중괄호 두번 사용하면 컨버터 적용됨
+- th:field 는 ${number} 중괄호 두번 안해도 컨버터 적용됨
+- 스프링 기본 컨버터
+  - @NumberFormat(pattern = "###,###")
+  - @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 
 
 
