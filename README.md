@@ -188,6 +188,8 @@
 - 파일 저장할 때는 이름 그대로 저장하지 않고 uuid로 저장함
 - multipart/formdata 는 part로 나눔 그래서 HttpServletRequest 에서는 request.getParts() 로 받을 수 있음
 - 스프링에서는 @RequestParam MultipartFile file 파라미터로 받을 수 있음
+  - file.getOriginalFilename() = 업로드 파일명
+  - file.transferTo() = 파일 저장
 
 
 
